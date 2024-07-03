@@ -8,7 +8,9 @@ import { TabLinkList } from 'src/components/Tabs/TabLinkList';
 import { TabPanels } from 'src/components/Tabs/TabPanels';
 import { Tabs } from 'src/components/Tabs/Tabs';
 
-import { DashboardLanding } from './Dashboard/DashboardLanding';
+// import { DashboardLanding } from './Dashboard/DashboardLanding';
+import { AlertsLanding } from './Alerts/AlertsLanding';
+// import { AlertsLanding } from './Alerts/AlertsLanding';
 type Props = RouteComponentProps<{}>;
 
 export const CloudPulseTabs = React.memo((props: Props) => {
@@ -16,6 +18,10 @@ export const CloudPulseTabs = React.memo((props: Props) => {
     {
       routeName: `${props.match.url}/dashboards`,
       title: 'Dashboards',
+    },
+    {
+      routeName: `${props.match.url}/alerts`,
+      title: 'Alerts',
     },
   ];
 
@@ -40,7 +46,10 @@ export const CloudPulseTabs = React.memo((props: Props) => {
       <React.Suspense fallback={<SuspenseLoader />}>
         <TabPanels>
           <SafeTabPanel index={0}>
-            <DashboardLanding />
+           <AlertsLanding />
+          </SafeTabPanel>
+          <SafeTabPanel index={1}>
+            <AlertsLanding />
           </SafeTabPanel>
         </TabPanels>
       </React.Suspense>

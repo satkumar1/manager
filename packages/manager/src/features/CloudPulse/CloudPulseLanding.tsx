@@ -5,6 +5,7 @@ import { LandingHeader } from 'src/components/LandingHeader/LandingHeader';
 import { SuspenseLoader } from 'src/components/SuspenseLoader';
 
 import { CloudPulseTabs } from './CloudPulseTabs';
+
 export const CloudPulseLanding = () => {
   return (
     <>
